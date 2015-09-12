@@ -1,0 +1,14 @@
+.wrapper{
+	padding-top: 75px;
+}
+#definitions{
+	padding-left: 25px;
+}
+.calc{
+	background-color: green;
+	padding: 15px;
+	color: white;
+}
+.calc>.total{
+	font-size: 36px;
+}

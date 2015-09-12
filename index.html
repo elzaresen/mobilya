@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Demo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/custom.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-7">
+					<div class="row">
+						<form action="/" method="GET" id="qrform" name="qrform">
+							<div class="form-group">
+								<label for="inputItem">Item</label>
+								<div class="input-group">
+									<input type="text" disabled="" class="form-control" id="inputItem" placeholder="Item">
+									<div class="input-group-btn">
+										<button type="button" id="mainQRScanner" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-fill="Item"><i class="fa fa-qrcode"></i></button>
+										<button type="button" class="btn btn-danger" onclick="removeEverything()"><i class="fa fa-remove"></i></button>
+									</div>
+								</div>
+							</div>
+							<div id="definitions"/></div>
+							<a onclick="submitform()" class="btn btn-default">Submit</a>
+						</form>
+					</div>
+				</div>
+				<div class="col-xs-offset-1 col-xs-4">
+					<h1>Mobilya Magazasi <small>DEMO</small></h1>
+					<h4>First QR Code format: <br><br><code>id, name, [def1, def2, def3, def4]</code><br><br><b>P.S.: There can be any amount of definitons.</b></h4>
+					<div class="calc">
+						<div class="purchase">
+							<div class="row" id="purchase">
+
+							</div>
+						</div>
+						<div class="total">0</div>
+					</div>
+				</div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel"></h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div id="example" class="thumbnail embed-responsive embed-responsive-4by3"></div>
+									<div class="boxWrapper auto">
+										<div id="hiddenImg"></div>
+										<div id="qrContent" class="alert alert-info" role="alert">
+											<p>No QR Code in sight.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="dist/js/jquery-2.1.4.min.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>
+	<script src="dist/js/saycheese.js"></script>
+	<script src="dist/js/print.js"></script>
+	<script type="text/javascript" src="dist/js/qr/grid.js"></script>
+	<script type="text/javascript" src="dist/js/qr/version.js"></script>
+	<script type="text/javascript" src="dist/js/qr/detector.js"></script>
+	<script type="text/javascript" src="dist/js/qr/formatinf.js"></script>
+	<script type="text/javascript" src="dist/js/qr/errorlevel.js"></script>
+	<script type="text/javascript" src="dist/js/qr/bitmat.js"></script>
+	<script type="text/javascript" src="dist/js/qr/datablock.js"></script>
+	<script type="text/javascript" src="dist/js/qr/bmparser.js"></script>
+	<script type="text/javascript" src="dist/js/qr/datamask.js"></script>
+	<script type="text/javascript" src="dist/js/qr/rsdecoder.js"></script>
+	<script type="text/javascript" src="dist/js/qr/gf256poly.js"></script>
+	<script type="text/javascript" src="dist/js/qr/gf256.js"></script>
+	<script type="text/javascript" src="dist/js/qr/decoder.js"></script>
+	<script type="text/javascript" src="dist/js/qr/qrcode.js"></script>
+	<script type="text/javascript" src="dist/js/qr/findpat.js"></script>
+	<script type="text/javascript" src="dist/js/qr/alignpat.js"></script>
+	<script type="text/javascript" src="dist/js/qr/databr.js"></script>
+	<script src="dist/js/effects_saycheese.js"></script>
+</body>
+</html>
