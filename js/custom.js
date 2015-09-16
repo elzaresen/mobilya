@@ -178,9 +178,9 @@ $('#myModal').on('hide.bs.modal', function (event) {
 var decoder = $("canvas").WebCodeCamJQuery().data().plugin_WebCodeCamJQuery;
 decoder.buildSelectMenu("select");
 decoder.init().play();
-decoder.stop()
+decoder.stop();
 
 
 $('select').on('change', function(){
-	decoder.stop().play();
+	decoder.stop().init().play();
 });
